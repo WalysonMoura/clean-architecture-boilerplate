@@ -1,9 +1,9 @@
 version: 2
 updates:
-  - package-ecosystem: "" # Define o ecossistema de pacotes (neste caso, npm para Node.js)
+  - package-ecosystem: npm # Define o ecossistema de pacotes (neste caso, npm para Node.js)
     directory: "/" # Diretório onde o arquivo package.json está localizado
     schedule:
-      interval: "monthly" # Intervalo de verificação de atualizações (pode ser daily, weekly, monthly)
+      interval: weekly # Intervalo de verificação de atualizações (pode ser daily, weekly, monthly)
     commit-message:
       prefix: "dependabot" # Prefixo da mensagem de commit
     open-pull-requests-limit: 10 # Limite de pull requests abertos simultaneamente

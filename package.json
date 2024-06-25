@@ -18,7 +18,7 @@
     "tsc": "tsc --noEmit",
     "validate": "pnpm lint && && pnpm format && pnpm tsc && pnpm test",
     "db:seed": "prisma db seed --preview-feature",
-    "db:deploy": "prisma deploy",
+    "db:deploy": "prisma migrate deploy",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:migrate:save": "prisma migrate save",
@@ -38,8 +38,11 @@
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "@prisma/client": "^5.15.1",
+    "dotenv": "^16.4.5",
+    "ioredis": "^5.4.1",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

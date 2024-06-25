@@ -1,0 +1,5 @@
+#!/bin/sh
+# Desative o concurrent para executar `check-types` após ESLint em lint-staged
+cd "$(dirname "$0")/.." 
+
+pnpm lint-staged --concurrent false

@@ -1,0 +1,28 @@
+{
+  "TypeScript Snippets": {
+    "Create InMemory Repository": {
+      "prefix": "inMemoryRepository",
+      "body": ["let inMemory$1Repository = new InMemory$1Repository();"],
+      "description": "Create InMemory Repository"
+    },
+
+    "Initialize UseCase and Test Template": {
+      "prefix": "useCaseTest",
+      "body": [
+        "let inMemory$1Repository = new InMemory$1Repository(inMemory$1Repository);",
+        "let sut = new $2UseCase(inMemory$1Repository);",
+        "",
+        "describe('$3', () => {",
+        "  beforeEach(() => {",
+        "    inMemory$1Repository = new InMemory$1Repository();",
+        "    sut = new $2UseCase(inMemory$1Repository);",
+        "  });",
+        "",
+        "  it('$4', async () => {",
+        "  });",
+        "})"
+      ],
+      "description": "Initialize UseCase and Test Template"
+    }
+  }
+}

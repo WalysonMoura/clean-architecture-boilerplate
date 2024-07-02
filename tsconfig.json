@@ -22,7 +22,6 @@
       "@/*": ["./src/*"],
       "@/test/*": ["./test/*"]
     },
-    "types": ["multer"],
     "strict": true,
     "resolveJsonModule": true,
     "strictPropertyInitialization": false

@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "lib": ["ES2023"],
-    "module": "node16",
+    "module": "commonjs",
     "target": "ES2022",
     "sourceMap": true,
     "outDir": "./dist",
@@ -20,9 +20,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "@test/*": ["./test/*"]
+      "@/test/*": ["./test/*"]
     },
-    "types": ["multer"],
     "strict": true,
     "resolveJsonModule": true,
     "strictPropertyInitialization": false

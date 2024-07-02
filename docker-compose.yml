@@ -1,0 +1,55 @@
+version: '3.9'
+
+networks:
+  backend-network:
+    driver: bridge
+  postgres-network:
+    driver: bridge
+
+services:
+  postgres:
+    container_name: notifications-microservice-postgres
+    image: postgres
+    networks:
+      - postgres-network
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: docker
+    #   PGDATA: /data/postgres
+    # volumes:
+    #   - './docker/data/postgres:/data/postgres'
+
+  cache:
+    container_name: notifications-microservice-redis
+    image: redis
+    ports:
+      - 6379:6379
+    #volumes:
+    # - ./docker/data/redis:/data
+
+  app:
+    container_name: notifications-microservice-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - backend-network
+      - postgres-network
+    ports:
+      - '3333:3333'
+    depends_on:
+      - postgres
+      - cache
+    environment:
+      DATABASE_URL: postgres://docker:docker@postgres:5432/docker
+      JWT_PRIVATE_KEY: fake-private-key-string
+      JWT_PUBLIC_KEY: fake-public-key-string
+      REDIS_HOST: cache
+      REDIS_PORT: 6379
+      REDIS_DB: 0
+      PORT: 3333
+    volumes:
+      - .:/app

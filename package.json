@@ -15,7 +15,7 @@
     "commit:ai": "oco",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "tsc": "tsc --noEmit",
+    "check-types": "tsc --noEmit --pretty",
     "validate": "pnpm lint && && pnpm format && pnpm tsc && pnpm test",
     "db:seed": "prisma db seed --preview-feature",
     "db:deploy": "prisma migrate deploy",

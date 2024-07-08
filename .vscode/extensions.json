@@ -1,3 +1,20 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "editorconfig.editorconfig"]
+  "recommendations": [
+    "pkief.material-icon-theme",
+    "dracula-theme.theme-dracula",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "codium-ai.codium",
+    "ms-azuretools.vscode-docker",
+    "editorconfig.editorconfig",
+    "visualstudioexptteam.vscodeintellicode",
+    "ms-vscode.vscode-typescript-next",
+    "christian-kohler.path-intellisense",
+    "prisma.prisma",
+    "tabnine.tabnine-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv"
+  ]
 }
